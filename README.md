@@ -7,6 +7,6 @@ This project challenges me to develop a weather app. First the progression of th
 Clone this repository on your local computer using git clone. And then run the index.html file.
 
 ## Usage 
-![Weather-ServerSide-API](/schedule.png)
+![Weather-ServerSide-API](/weather.png)
 
 ## Deployment Link
