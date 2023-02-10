@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+h1 {
+    text-align: center;
+    background-color: #393f96;
+    padding:10px 0;
+}
+.Weather-wrapper {
+   display:flex;
+    
+}
+.weather-left{
+    width:20%;
+}
+.weather-right{
+    width:80%;
+}
+#Searching{
+    padding:8px;
+    margin-bottom: 20px;
+    display:block;
+}
+#BtnSearch{
+    background-color: #6991e3;
+    color:white;
+    padding:8px 0;
+    width: 100%;
+    margin-bottom: 20px;
+    border:none;
+    border-radius: 5px;
+}
+.searched-cities .SearchedButton {
+    background-color:#aeaeae ;
+    color:black;
+    padding:8px 0;
+    width: 100%;
+    margin-bottom:10px;
+    border:none;
+    border-radius: 5px;
+}
+.current-city {
+   
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html <html lang="en" <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather ServerSide API</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Weather Dashboard</h1>
+    <div class="Weather-wrapper">
+        <div class="weather-left">
+            <div class="city-search">
+                <h2>Search for a city</h2>
+                <input id="Searching" type="text" placeholder="San Diego" />
+                <!--target this button in javascript, and add a click event listener to it and in the click event listener function body you will get 
+            the value of the input field. You will then make a request to that server api using the city name. -->
+                <button id="BtnSearch">Search</button>
+            </div>
+            <div class="searchedCities">
+                <button class="SearchedButton">Atlanta</button>
+                <button class="SearchedButton">Denver</button>
+                <button class="SearchedButton">Seattle</button>
+                <button class="SearchedButton">San Franciso</button>
+                <button class="SearchedButton">Orlando</button>
+            </div>
+        </div>
+        <div class="weather-right">
+            <div class="current-city">
+                <h2><span id="cityname">Atlanta</span><span id="currentDate">02/03/2023</span><span
+                        id="city-icon"></span></h2>
+                <p>temp:<span id="temperature">76.62</span>F</p>
+                <p>wind:<span id="Wind">8.43</span>MPH</p>
+                <p>humidity:<span id="humidity">44</span>%</p>
+            </div>
+            <div class="FivedayForecast">
+                <h2>5-Day Forecast:</h2>
+                <div class="FivedayForecastWrapper">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
