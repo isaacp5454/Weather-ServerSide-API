@@ -1,5 +1,5 @@
 var apiKey = 'bb95a39833559c20c4b54a07619bd7f6';
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + "&appid=" + apiKey;
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + "&appid=" + apiKey;
 let FivedayForecastWrapper = document.querySelector(".FivedayForecastWrapper");
 let searchedCities = document.querySelector(".searchedCities");
 let citiesArray = JSON.parse(localStorage.getItem("citiesArray")) || [];
@@ -7,13 +7,13 @@ let citiesArray = JSON.parse(localStorage.getItem("citiesArray")) || [];
 $(function () {
     function currentWeather(cityName) {
         console.log(cityName)
-        var coordinatesUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=' + apiKey;
+        var coordinatesUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=' + apiKey;
         fetch(coordinatesUrl)
             .then(function (response) {
                 return response.json();
             })
             .then(function (data) {
-                var url = `http://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&appid=${apiKey}`;
+                var url = `https://api.openweathermap.org/data/2.5/forecast?lat=${data[0].lat}&lon=${data[0].lon}&appid=${apiKey}`;
                 console.log(data);
                 console.log(data[0].lat);
                 console.log(data[0].lon);
@@ -38,7 +38,7 @@ $(function () {
             citiesArray.push(cityName);
         }
         var url = 'api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}';
-        var coordinatesUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=' + apiKey;
+        var coordinatesUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=' + apiKey;
         console.log(cityName);
         currentWeather(cityName)
 
