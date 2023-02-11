@@ -37,7 +37,7 @@ $(function () {
         if (!citiesArray.includes(cityName)) {
             citiesArray.push(cityName);
         }
-        var url = 'api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}';
+        var url = 'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}';
         var coordinatesUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityName + '&limit=5&appid=' + apiKey;
         console.log(cityName);
         currentWeather(cityName)
@@ -49,7 +49,7 @@ $(function () {
             let newcard = `
             <div class="card">
                         <h3>9/14/2022</h3>
-                        <img src="http://openweathermap.org/img/w/${list[i].weather[0].icon}.png" alt="icon" />
+                        <img src="https://openweathermap.org/img/w/${list[i].weather[0].icon}.png" alt="icon" />
                         <p>temp:<span id="5-day-temperature">${(parseInt((list[i].main.temp) - 273) * 1.8 + 32)}</span>F</p>
                         <p>wind:<span id="5-day-Wind">${(list[i].wind.speed)}</span>MPH</p>
                         <p>humidity:<span id="5-day-humidity">${(list[i].main.humidity)}</span>%</p>
